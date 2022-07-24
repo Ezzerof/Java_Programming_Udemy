@@ -1,4 +1,4 @@
-package Mega_Bytes_Converter;
+package mega_bytes_converter;
 
 public class megaBytesConverter {
 

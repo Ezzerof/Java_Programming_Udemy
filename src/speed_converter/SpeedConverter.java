@@ -1,4 +1,4 @@
-package Speed_Converter;
+package speed_converter;
 
 public class SpeedConverter {
 

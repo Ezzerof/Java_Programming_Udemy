@@ -1,4 +1,4 @@
-package Barking_Dog;
+package barking_dog;
 
 public class barkingDog {
 

@@ -1,4 +1,4 @@
-package PositiveNegativeZero;
+package positive_negative_zero;
 
 public class PositiveNegativeZero {
 

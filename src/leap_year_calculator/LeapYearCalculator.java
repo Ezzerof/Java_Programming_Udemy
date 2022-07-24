@@ -1,4 +1,4 @@
-package Leap_Year_Calculator;
+package leap_year_calculator;
 
 public class LeapYearCalculator {
 
