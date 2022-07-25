@@ -6,16 +6,31 @@ public class secondsAndMinutes {
 
         int minute = 60;
         int hour = 0;
-        int result = 0;
+        int minRest = 0;
 
         if (minutes < 0 || seconds < 0 || seconds > 59) {
             System.out.println("Invalid value.");
         } else {
             if (minutes > 60)
                 hour = minutes / minute;
-                result = (minutes % minute);
+                minRest = (minutes % minute);
         }
-        System.out.printf("%dh:%dm:%ds", hour, result, seconds);
+        String hourString = hour  + "h";
+        String minString = minRest + "m";
+        String secString = seconds + "s";
+        if (hour < 10 || minRest < 10 || seconds < 10){
+            if (hour < 10){
+                hourString = "0" + hourString;
+            }
+            if (minRest < 10) {
+                minString = "0" + minString;
+            }
+
+            if (seconds < 10){
+                secString = "0" + secString;
+            }
+        }
+        System.out.printf("%s:%s:%s", hourString, minString, secString);
     }
 
     public static void getDurationString(int seconds){
@@ -35,7 +50,22 @@ public class secondsAndMinutes {
                 minutes = minutes % 60;
             }
         }
-        System.out.printf("%dh:%dm:%ds", hours, minutes, remSeconds);
+        String hourString = hours  + "h";
+        String minString = minutes + "m";
+        String secString = remSeconds + "s";
+        if (hours < 10 || minutes < 10 || remSeconds < 10){
+            if (hours < 10){
+                hourString = "0" + hourString;
+            }
+            if (minutes < 10) {
+                minString = "0" + minString;
+            }
+
+            if (remSeconds < 10){
+                secString = "0" + secString;
+            }
+        }
+        System.out.printf("%s:%s:%s", hourString, minString, secString);
     }
 
     public static void main(String[] args) {
