@@ -22,17 +22,16 @@ public class SpeedConverter {
     public static void printConversion(double kilometersPerHour){
 
         if (kilometersPerHour < 0) {
-            System.out.println("Invalid value");
+            System.out.println("Invalid Value");
         } else {
 
-            System.out.printf("%.1f kh/h = %d mi/h", kilometersPerHour, toMilesPerHour(kilometersPerHour));
+            System.out.printf("%.2f km/h = %d mi/h", kilometersPerHour, toMilesPerHour(kilometersPerHour));
 
         }
     }
 
     public static void main(String[] args) {
-        System.out.println(toMilesPerHour(1.5));
-        printConversion(-5.6);
+        printConversion(1.25);
     }
 
 }
