@@ -1,21 +1,21 @@
 package mega_bytes_converter;
 
+/*
+Write a method called printMegaBytesAndKiloBytes that has 1 parameter of type int with the name kiloBytes.
+The method should not return anything (void) and it needs to calculate the megabytes and remaining kilobytes from the kilobytes parameter.
+Then it needs to print a message in the format "XX KB = YY MB and ZZ KB".
+ */
+
 public class megaBytesConverter {
 
     public static void printMegaBytesAndKiloBytes(int kiloBytes) {
-
-        double oneKB = 0.0009765625;
-        double result = 0;
-
-        if (kiloBytes == 0) {
-            System.out.println("Invalid value");
+        if (kiloBytes < 0) {
+            System.out.println("Invalid Value");
         } else {
-
-            result = kiloBytes * oneKB;
-
+            int megaBytes = kiloBytes / 1024;
+            int remainder = kiloBytes % 1024;
+            System.out.printf("%d KB = %d MB and %d KB", kiloBytes, megaBytes, remainder);
         }
-
-        System.out.printf("%d KB = %f MB and %d KB", kiloBytes, Math.floor(result), Math.round((result % 2) * 1000));
 
     }
 

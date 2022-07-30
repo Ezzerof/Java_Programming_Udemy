@@ -1,10 +1,17 @@
 package number_palindrome;
 
+/*
+Write a method called isPalindrome with one int parameter called number.
+The method needs to return a boolean.
+It should return true if the number is a palindrome number otherwise it should return false.
+Check the tips below for more info about palindromes.
+ */
+
 public class NumberPalindrome {
 
     public static boolean isPalindrome(int number){
 
-        String strNum = Integer.toString(number);
+        String strNum = Integer.toString(Math.abs(number));
         StringBuilder sb = new StringBuilder(strNum);
         sb.reverse();
 
@@ -26,7 +33,7 @@ public class NumberPalindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome(121));
+        System.out.println(isPalindrome(222));
     }
 
 }
