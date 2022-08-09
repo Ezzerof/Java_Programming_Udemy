@@ -2,13 +2,14 @@ package encapsulation_challenge;
 
 public class Printer {
     private double toner = 100;
-    private int pagePrinted = 0;
+    private int pagePrinted;
     private String type;
 
     public Printer(double toner) {
         if (toner <= 0 || toner >= 100){
             this.toner = 100;
         }
+        this.pagePrinted = 0;
     }
 
     public String getType() {
