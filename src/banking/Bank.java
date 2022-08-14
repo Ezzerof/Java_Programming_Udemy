@@ -16,7 +16,7 @@ public class Bank {
         return name;
     }
 
-    public Branch findBranch(String nameOfBranch) {
+    private Branch findBranch(String nameOfBranch) {
         for (int i = 0; i < branches.size(); i++) {
             Branch branch = branches.get(i);
             if (branch.getName().equals(nameOfBranch)) {
